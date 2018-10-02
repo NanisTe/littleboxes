@@ -30,7 +30,7 @@ toutbeau <- function(x, l = 60) {
   x <- gsub("^[# ]+", "", x)
   x <- gsub("[# =]+$", " ", x)
   x <- gsub(" $", " ", x)
-  res <- paste(c("#' <!--",rep("#", l-6),"%##"), collapse = "")
+  res <- paste(c("#' <!--",rep("#", l-10),"%##"), collapse = "")
   res <- c(res, paste(c("#", rep(" ", l - 2), "#"), collapse = ""))
   res <- c(res, do.call(c, as.list(dd(x,l=l))))
   res <- c(res, paste(c("#", rep(" ", l - 2), "#"), collapse = ""))
