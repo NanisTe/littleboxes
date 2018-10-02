@@ -35,8 +35,9 @@ toutbeau <- function(x, l = 60) {
   res <- c(res, do.call(c, as.list(dd(x,l=l))))
   res <- c(res, paste(c("#", rep(" ", l - 2), "#"), collapse = ""))
   res <- c(res, paste(c("##%",rep("#", l-6),"%##"), collapse = ""))
-  res <- c(res, "")
   res <- c(res, "#' -->")
+  res <- c(res, "")
+
   res
   res <- paste(res, collapse = "\n")
   return(res)
