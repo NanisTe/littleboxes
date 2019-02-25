@@ -1,6 +1,7 @@
 uuid <- function(){
   if(!require("uuid")){
     install.packages("uuid")
+    library("uuid")
   }
   UUIDgenerate(FALSE) %>% str_replace_all("-", "")
 }
