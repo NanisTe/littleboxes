@@ -1,3 +1,10 @@
+uuid <- function(){
+  if(!require("uuid")){
+    install.packages("uuid")
+  }
+  UUIDgenerate(FALSE) %>% str_replace_all("-", "")
+}
+
 dd <- function(x,level=1,l=80) {
   if (nchar(x) <= (l-10)) { # ptet pas -4 ici
     base <- (l - nchar(x) - 2)/2
@@ -41,6 +48,7 @@ toutbeau <- function(x, l = 80) {
   res <- c(res, paste(c("#", rep(" ", l - 2), "#"), collapse = ""))
   res <- c(res, paste(c("##%",rep("#", l-6),"%##"), collapse = ""))
   res <- c(res, paste("#' --> ",strrep("#",level), x))
+  res <- c(res, paste("#' <!-- ", uuid() , "-->"))
 
   res
   res <- paste(res, collapse = "\n")
@@ -48,7 +56,11 @@ toutbeau <- function(x, l = 80) {
 }
 
 
+
+
+
 littleboxes <- function() {
+  
   context <- rstudioapi::getActiveDocumentContext()
   for (sel in context$selection) {
     # print(sel)
