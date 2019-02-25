@@ -3,7 +3,11 @@ uuid <- function(){
     install.packages("uuid")
     library("uuid")
   }
-  UUIDgenerate(FALSE) %>% str_replace_all("-", "")
+  if(!require("stringr")){
+    install.packages("stringr")
+    library("stringr")
+  }
+  str_replace_all(UUIDgenerate(FALSE),"-", "")
 }
 
 dd <- function(x,level=1,l=80) {
