@@ -14,7 +14,7 @@ dd <- function(x,level=1,l=80) {
   if (nchar(x) <= (l-10)) { # ptet pas -4 ici
     base <- (l - nchar(x) - 2)/2
     # Add leading points depending on level to the text to allow indentation in document outline of RStudio ( see upper right corner of editor window)
-    return(paste(c("####", rep(" ", floor(base)-3-(level-1)),strrep("* ",(level-1)), x, rep(" ",
+    return(paste(c("####", rep(" ", floor(base)-3-(2*(level-1))),strrep("* ",(level-1)), x, rep(" ",
       ceiling(base)-3), "####"), collapse = ""))
   }
   

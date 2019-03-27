@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+
 .Rproj.user
-.Rhistory
 .RData
 .Ruserdata
-=======
+
 # History files
 .Rhistory
 .Rapp.history
@@ -37,4 +36,4 @@ vignettes/*.pdf
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
->>>>>>> 93ebf31009427a7e38c19ffe79f9e26fffaaccf6
+
