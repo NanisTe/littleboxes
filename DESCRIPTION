@@ -1,9 +1,9 @@
 Package: littleboxes
 Type: Package
 Title: RStudio Addin - creates boxed in titles in an Rscript
-Version: 0.1.0
-Author: Vincent Guyader
-Maintainer: Vincent Guyader <vincent@thinkr.fr>
+Version: 1.0.1
+Author: Vincent Guyader & Sinan Teske
+Maintainer: Sinan Teske <github.com/NanisTe>
 Description: Creates boxed in titles in an Rscript
 License: MIT
 LazyData: TRUE
