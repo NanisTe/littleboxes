@@ -51,15 +51,20 @@ toutbeau <- function(x, l = 80) {
   if(level == 1){
     res <- paste(c("#' <!--",rep("#", l-10),"%##"), collapse = "")
     res <- c(res, paste(c("#", rep(" ", l - 2), "#"), collapse = ""))
+  }else if(level == 2){
+    res <- paste(c("#' <!--",rep("-", l-10),"%##"), collapse = "")
   }else{
-    res <- paste(c("#' <!--",rep("_", l-10),"%##"), collapse = "")
+    res <- paste(c("#' <!--",rep("¨", l-10),"%##"), collapse = "")
   }
+  
   res <- c(res, do.call(c, as.list(dd(x,level,l=l))))
   if(level == 1){
     res <- c(res, paste(c("#", rep(" ", l - 2), "#"), collapse = ""))
     res <- c(res, paste(c("##%",rep("#", l-6),"%##"), collapse = ""))
+  }else if(level == 2){
+    res <- c(res, paste(c("##%",rep("-", l-6),"%##"), collapse = ""))
   }else{
-    res <- c(res, paste(c("##%",rep("_", l-6),"%##"), collapse = ""))
+    res <- c(res, paste(c("##%",rep("¨", l-6),"%##"), collapse = ""))
   }
   res <- c(res, paste("#' --> ",strrep("#",level), x))
   res <- c(res, paste("#' <!-- ", uuid() , "-->"))
